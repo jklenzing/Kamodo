@@ -45,3 +45,5 @@ jobs:
       if: ${{ matrix.test_config == 'latest'}}
       run: pip install .
 
+    - name: Check that install imports correctly
+      run: python -c "import kamodo; print(kamodo.__version__)"
